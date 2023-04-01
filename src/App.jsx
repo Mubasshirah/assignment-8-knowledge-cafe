@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/header/Header'
 import BlogBody from './components/blogBody/BlogBody'
-import Faq from './components/FAQ/Faq'
+
+import Blog from './components/Blog/Blog'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,7 +15,7 @@ function App() {
       
       <Header></Header>
       <BlogBody></BlogBody>
-      <Faq></Faq>
+      <Blog></Blog>
     </div>
   )
 }

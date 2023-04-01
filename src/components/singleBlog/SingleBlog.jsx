@@ -8,6 +8,7 @@ const SingleBlog = (props) => {
     const {id,coverUrl,picture,time,name,publishedDate,blog}=props.blog;
     const handleAddToBookmark=props.handleAddToBookmark;
     const handleTimeSpend=props.handleTimeSpend;
+    
     return (
         <div className='singleBlog'>
             <img src={coverUrl} alt="" />

@@ -15,6 +15,7 @@ const BlogBody = () => {
     const handleAddToBookmark=(blog)=>{
          const newCart=[...cart,blog];
         setCart(newCart);
+        
        
         
     }
