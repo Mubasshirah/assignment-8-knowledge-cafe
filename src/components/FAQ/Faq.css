@@ -1,0 +1,7 @@
+.QnA h2{
+    display: inline;
+border-bottom: 2px solid rgb(241, 241, 241);
+}
+.QnA{
+    padding: 10px 20px;
+}
