@@ -5,6 +5,7 @@ import './BlogBody.css'
 const BlogBody = () => {
     const [blogs,setBlogs]=useState([]);
     const [cart,setCart]=useState([]);
+    const [time,setTime]=useState(0);
     useEffect(()=>{
         fetch('blogs.json')
         .then(res=>res.json())
@@ -17,14 +18,19 @@ const BlogBody = () => {
        
         
     }
+    
+    const handleTimeSpend=(blog)=>{
+        const newTime=time+blog.time;
+        setTime(newTime);
+    }
     return (
         <div className='blogBody'>
             <div className="blogPosts">
                 {
-                    blogs.map(blog=><SingleBlog handleAddToBookmark={handleAddToBookmark} blog={blog} key={blog.id}></SingleBlog>)
+                    blogs.map(blog=><SingleBlog handleAddToBookmark={handleAddToBookmark} handleTimeSpend={handleTimeSpend} blog={blog} key={blog.id}></SingleBlog>)
                 }
             </div>
-            <div className="blogBookmarks"><BlogBookmark cart={cart} key={cart.id} ></BlogBookmark></div>
+            <div className="blogBookmarks"><BlogBookmark cart={cart} key={cart.id} time={time}></BlogBookmark></div>
         </div>
     );
 };

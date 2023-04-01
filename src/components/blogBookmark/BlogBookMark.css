@@ -1,12 +1,22 @@
 .blogBookmark{
     height: 100%;
+}
+.readtime{
+    position: sticky;
+    top: 0;
+}
+.readtime h2{
+    padding:20px ;
+    background-color: rgb(247, 245, 245) ;
     border-radius: 8px;
-    background-color: rgb(247, 245, 245);
+    
+    
 }
 .blogBookmarkText{
     position: sticky;
-    top: 0;
+    top: 100px;
     padding: 20px;
+    background-color: rgb(247, 245, 245);
     
 }
 .blogBookmarkText li{

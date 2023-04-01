@@ -3,9 +3,14 @@ import './BlogBookMark.css'
 const BlogBookmark = (props) => {
     console.log(props.cart)
     const cart=props.cart
+    const time=props.time
     
     return (
         <div className='blogBookmark'>
+            <div className='readtime'>
+                <h2>Spent time on read:{time}</h2>
+            </div>
+     
        <div className='blogBookmarkText'>
        <h3>Bookmarked Blogs:{cart.length} </h3> 
         {
@@ -14,6 +19,7 @@ const BlogBookmark = (props) => {
        </div>
        
         </div>
+    
     );
 };
 

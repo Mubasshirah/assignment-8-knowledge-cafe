@@ -7,6 +7,7 @@ import { faBookBookmark } from '@fortawesome/free-solid-svg-icons'
 const SingleBlog = (props) => {
     const {id,coverUrl,picture,time,name,publishedDate,blog}=props.blog;
     const handleAddToBookmark=props.handleAddToBookmark;
+    const handleTimeSpend=props.handleTimeSpend;
     return (
         <div className='singleBlog'>
             <img src={coverUrl} alt="" />
@@ -19,7 +20,7 @@ const SingleBlog = (props) => {
                 <p>{time} min read <button className='btn-singleBlog' onClick={()=>handleAddToBookmark(props.blog)} ><FontAwesomeIcon className='font' icon={faBookBookmark} /></button></p>
             </div>
             <h2>{blog}</h2>
-            <button>Mark as read</button>
+            <button onClick={()=>handleTimeSpend(props.blog)}>Mark as read</button>
         </div>
     );
 };
