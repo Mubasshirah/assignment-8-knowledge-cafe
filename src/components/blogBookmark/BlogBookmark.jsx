@@ -9,7 +9,7 @@ const BlogBookmark = (props) => {
        <div className='blogBookmarkText'>
        <h3>Bookmarked Blogs:{cart.length} </h3> 
         {
-            cart.map(singleCart=><li><h4>{singleCart.blog}</h4></li>)
+            cart.map(singleCart=><li key={singleCart.id}><h4>{singleCart.blog}</h4></li>)
         }
        </div>
        
